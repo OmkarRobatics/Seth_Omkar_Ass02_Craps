@@ -19,15 +19,15 @@ public class Ass_02_Craps {
 
             if (crapsRoll == 7 || crapsRoll == 11) // testing for natural
             {
-                System.out.println("You rolled " + crapsRoll + "." + " You won by rolling a natural!"); // outputs if natural is rolled
+                System.out.println("Your first roll was a " + die1 + " and your second was a " + die2 + "." + " The sum is " + crapsRoll + "." + " You won by rolling a natural!"); // outputs if natural is rolled
             }
             else if (crapsRoll == 2 || crapsRoll == 3 || crapsRoll == 12) // testing for crap out
             {
-                System.out.println("You rolled a crap out, " + crapsRoll + "." + " You lose."); // outputs if a crap out is rolled
+                System.out.println("Your first roll was a " + die1 + " and your second was a " + die2 + "." +  " You rolled a crap out, " + crapsRoll + "." + " You lose."); // outputs if a crap out is rolled
             }
             else // roll is a 4,5,6,8,9,10
             {
-                System.out.println("You rolled a " + crapsRoll + "." + " This is kept as a point."); // outputs
+                System.out.println("Your first roll was a " + die1 + " and your second was a " + die2 + "." +  " The sum is " + crapsRoll + "." + " This is kept as a point."); // outputs
                 point = crapsRoll; // stores the roll as a point
             }
             
@@ -41,17 +41,17 @@ public class Ass_02_Craps {
 
                     if (crapsRoll == point) // tests if point is matched
                     {
-                        System.out.println("You matched the point by rolling a " + crapsRoll + "!" + " You win!"); // outputs if test is passed
+                        System.out.println("Your first roll was a " + die1 + " and your second was a " + die2 + "." + " You matched the point by rolling a " + crapsRoll + "!" + " You win!"); // outputs if test is passed
                         match = true;
                     }
                     else if (crapsRoll == 7) // tests if 7 is rolled
                     {
-                        System.out.println("You lost by rolling a 7."); // outputs if test is passed
+                        System.out.println("Your first roll was a " + die1 + " and your second was a " + die2 + "." + " You lost because the sum is 7."); // outputs if test is passed
                         match = true;
                     }
                     else // the roll is not matched to the point or is not a 7
                     {
-                        System.out.println("You rolled a " + crapsRoll + "." + " Keep rolling"); // outputs
+                        System.out.println("Your first roll was a " + die1 + " and your second was a " + die2 + "." + " The sum is " + crapsRoll + "." + " Keep rolling"); // outputs
                         match = false;
                     }
                 } while (match == false); // repeats until the roll is 7 or matches the point
